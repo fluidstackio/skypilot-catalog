@@ -37,6 +37,8 @@ jobs:
           version=$(python -c 'import sky; print(sky.clouds.service_catalog.constants.CATALOG_SCHEMA_VERSION)')
           mkdir -p catalogs/catalogs/$version
           cd catalogs/catalogs/$version
+          ls $HOME
+          ls /
           python $HOME/sky/clouds/service_catalog/data_fetchers/fetch_fluidstack.py
 
       - name: Commit catalog
