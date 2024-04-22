@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
           path: catalogs
           token: ${{ secrets.GH_TOKEN_PAT }}
-          ref: fluistack-catalog
+          ref: fluidstack-catalog
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
