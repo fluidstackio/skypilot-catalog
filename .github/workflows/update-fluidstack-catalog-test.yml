@@ -14,6 +14,7 @@ jobs:
         with:
           repository: fluidstackio/skypilot
           path: sky
+          ref: master
       - name: Clone Catalog repo
         uses: actions/checkout@v3
         with:
