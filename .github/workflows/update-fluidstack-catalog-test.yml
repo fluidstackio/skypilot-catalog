@@ -32,10 +32,13 @@ jobs:
           python -m pip install --upgrade pip
           cd sky
           pip install .
+          apt install tree
 
       - name: Run fetch_fluidstack
         run: |
           version=$(python -c 'import sky; print(sky.clouds.service_catalog.constants.CATALOG_SCHEMA_VERSION)')
+          tree $HOME
+          tree .
           mkdir -p catalogs/catalogs/$version
           cd catalogs/catalogs/$version
           ls $GITHUB_WORKSPACE/sky/clouds/service_catalog/data_fetchers/
