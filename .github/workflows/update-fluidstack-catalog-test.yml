@@ -32,7 +32,7 @@ jobs:
           python -m pip install --upgrade pip
           cd sky
           pip install .
-          apt install tree
+          sudo apt install tree
 
       - name: Run fetch_fluidstack
         run: |
